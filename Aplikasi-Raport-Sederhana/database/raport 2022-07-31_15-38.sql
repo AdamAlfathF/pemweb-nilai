@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2024 at 02:37 PM
+-- Generation Time: Jul 06, 2024 at 02:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -192,7 +192,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`email`, `password`) VALUES
-('admin', '123');
+('admin@aga.com', '123');
 
 -- --------------------------------------------------------
 
@@ -210,7 +210,7 @@ CREATE TABLE `tb_dosen` (
 --
 
 INSERT INTO `tb_dosen` (`email`, `password`) VALUES
-('dosen', '123');
+('dosen@aga.com', '123');
 
 --
 -- Indexes for dumped tables

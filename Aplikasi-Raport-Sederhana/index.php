@@ -5,7 +5,7 @@ if (isset($_POST['submit']))
 {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $sql = "SELECT * FROM tb_user WHERE email='$email'AND password='$password'";
+    $sql = "SELECT * FROM tb_admin WHERE email='$email'AND password='$password'";
     $result = mysqli_query($conn, $sql);
 
     if ($result->num_rows > 0)
@@ -13,7 +13,7 @@ if (isset($_POST['submit']))
         $row = mysqli_fetch_assoc($result);
         $_SESSION['email'] = $row['email'];
         $_SESSION['username'] = $row['nama_lengkap'];
-        header("Location: dashboard.php");
+        header("Location: index2.php");
         exit();
     }else{
         echo "<script>alert('Email atau password Anda salah. Silakan coba lagi')</script>";
