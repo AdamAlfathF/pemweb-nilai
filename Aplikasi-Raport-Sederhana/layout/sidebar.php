@@ -2,11 +2,11 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon ">
             <i class="fas fa-book-reader"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Poltek AGA</div>
+        <div class="sidebar-brand-text mx-3">Raport Mahasiswa</div>
     </a>
 
     <!-- Divider -->
@@ -16,7 +16,7 @@
     <li class="nav-item <?php if($title == 'dashboard') echo "active" ?>">
         <a class="nav-link" href="../index2.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Menu Utama</span></a>
     </li>
 
     <!-- Divider -->
