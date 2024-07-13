@@ -49,7 +49,7 @@ $title = 'dashboard';
     <div id="wrapper">
 
         <!-- Sidebar -->
-          <?php include_once("layout/sidebar_index.php") ?>
+          <?php include_once("layout/sidebar_index copy.php") ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -59,7 +59,7 @@ $title = 'dashboard';
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include_once("layout/topbar.php") ?>
+                <?php include_once("layout/topbar copy.php") ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -135,7 +135,7 @@ $title = 'dashboard';
                      <a href="database/backup.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="backup"><i
                     class="fas fa-download fa-sm text-white-50"></i> Backup Database</a>
                     </div>
-            <?php include 'layout/footer.php'; ?>
+            <?php include 'layout/footer copy.php'; ?>
             
         </div>
         <!-- End of Content Wrapper -->
