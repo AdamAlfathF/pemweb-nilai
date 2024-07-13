@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'mata-pelajaran';
+$title = 'mata-kuliah';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ $title = 'mata-pelajaran';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mata Pelajaran</title>
+    <title>Mata Kuliah</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -67,7 +67,7 @@ $title = 'mata-pelajaran';
                             <?php
                             $db=dbConnect();
                             if($db->connect_errno==0){
-                            $sql="SELECT * FROM mata_pelajaran";
+                            $sql="SELECT * FROM mata_kuliah";
                             $res=$db->query($sql);
                             if($res){
                             ?>
@@ -76,7 +76,7 @@ $title = 'mata-pelajaran';
                                     <thead>
                                         <tr>
                                             <th>Kode</th>
-                                            <th>Mata Pelajaran</th>
+                                            <th>Mata Kuliah</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -86,8 +86,8 @@ $title = 'mata-pelajaran';
                                         foreach($data as $row){
                                         ?>
                                         <tr>
-                                            <td><?= $row['kd_mp']; ?></td>
-                                            <td><?= $row['nama_mp']; ?></td>
+                                            <td><?= $row['kd_mk']; ?></td>
+                                            <td><?= $row['nama_mk']; ?></td>
                                             <td>
                                                 <!-- a href -->
                                                 <a href="mata-pelajaran-edit.php?kd_mp=<?= $row['kd_mp']?>" class="btn btn-success btn-circle btn-sm">
