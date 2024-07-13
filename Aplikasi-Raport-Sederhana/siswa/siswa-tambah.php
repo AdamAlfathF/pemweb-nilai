@@ -13,6 +13,7 @@ if(isset($_POST['btn-simpan'])){
      $asal_sekolah = $_POST['asal_sekolah'];
 
      $query = "INSERT INTO siswa VALUES ('$nis','$nama','$alamat','$kelas','$tanggal','$jenis_kelamin','$agama','$orangtua','$asal_sekolah')";
+     $execute = bisa($con,$query);
      if($execute == 1){
          header('location: siswa.php');   
      }else{
@@ -88,7 +89,7 @@ if(isset($_POST['btn-simpan'])){
                         <div class="card-body">
                              <form method="post" action="">
                     <div class="form-group">
-                        <label>NIS</label>
+                        <label>NIM</label>
                         <input type="text" name="nis" class="form-control">
                     </div>
                     <div class="form-group">
