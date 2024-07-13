@@ -76,7 +76,7 @@ $title = 'nilai';
                                 <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>NIS</th>
+                                            <th>NIM</th>
                                             <th>Nama</th>
                                             <th>Tingkat</th>
                                             <th>Tanggal Lahir</th>

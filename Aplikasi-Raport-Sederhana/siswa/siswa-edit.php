@@ -6,7 +6,7 @@ $nis = $_GET['nis'];
 $query = "SELECT * FROM siswa WHERE nis='$nis'";
 $ubah = ambilsatubaris($con, $query);
 
-$kelas = ['I', 'II', 'III'];
+$kelas = ['1', '2', '3'];
 $agama = ['ISLAM', 'PROTESTAN', 'KATHOLIK', 'HINDU', 'BUDHA', 'KONGHUCU', 'LAINNYA'];
 $jenis = ['L', 'P'];
 
@@ -97,7 +97,7 @@ if(isset($_POST['btn-ubah'])){
                         <div class="card-body">
                 <form method="post" action="">
                     <div class="form-group">
-                        <label>NIS</label>
+                        <label>NIM</label>
                         <input type="text" name="nis" value="<?= $ubah['nis'];?>" class="form-control" readonly>
                     </div>
                     <div class="form-group">
