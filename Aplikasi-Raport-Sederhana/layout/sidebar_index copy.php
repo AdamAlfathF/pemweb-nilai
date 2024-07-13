@@ -29,7 +29,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item <?php if($title == 'siswa') echo 'active' ?>">
-        <a class="nav-link" href="siswa/siswa.php">
+        <a class="nav-link" href="siswa/siswa copy.php">
             <i class="fas fa-fw fa-users"></i>
             <span>Mahasiswa</span>
         </a>
@@ -37,19 +37,19 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item <?php if($title == 'nilai') echo 'active' ?>">
-        <a class="nav-link" href="nilai/nilai.php">
+        <a class="nav-link" href="nilai/nilai copy.php">
             <i class="fas fa-fw fa-graduation-cap"></i>
             <span>Nilai</span>
         </a>
     </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - Pages Collapse Menu 
     <li class="nav-item <?php if($title == 'guru') echo 'active' ?>">
         <a class="nav-link" href="guru/guru.php">
             <i class="fas fa-fw fa-chalkboard-teacher"></i>
             <span>Dosen</span>
         </a>
-    </li>
+    </li> 
 
     <li class="nav-item <?php if($title == 'mata-pelajaran') echo 'active' ?>">
         <a class="nav-link" href="mata-pelajaran/mata-pelajaran.php">
@@ -57,7 +57,7 @@
             <span>Mata Kuliah</span>
         </a>
     </li>
-
+-->
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

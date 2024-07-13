@@ -38,7 +38,7 @@ $title = 'mahasiswa';
     <!-- Page Wrapper -->
     <div id="wrapper">
 <!-- sidebar -->
-       <?php include_once("../layout/sidebar.php") ?>
+       <?php include_once("../layout/sidebar copy.php") ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -47,7 +47,7 @@ $title = 'mahasiswa';
             <div id="content">
 
             <!-- top bar -->
-            <?php include_once("../layout/topbar.php") ?>
+            <?php include_once("../layout/topbar copy.php") ?>
               
 
                 <!-- Begin Page Content -->
@@ -61,7 +61,7 @@ $title = 'mahasiswa';
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <!-- <h6 class="m-0 font-weight-bold text-primary">Basis Data Siswa</h6> -->
-                            <a href="siswa-tambah.php"><button type="button" class="btn btn-outline-primary rounded">Tambah</button></a>
+                            <!-- Tombol tambah dihapus -->
                         </div>
                         <div class="card-body">
                             <?php
@@ -103,14 +103,7 @@ $title = 'mahasiswa';
                                             <td><?= $row['orang_tua']; ?></td>
                                             <td><?= $row['asal_sekolah'] ?></td>
                                             <td>
-                                                <!-- a href -->
-                                                <a href="siswa-edit.php?nis=<?= $row['nis']?>" class="btn btn-success btn-circle btn-sm">
-                                                <i class="fas fa-edit"></i>
-                                                </a>
-                                                <!-- a href -->
-                                                <a href="siswa-hapus.php?nis=<?= $row['nis'];?>" class="btn btn-danger btn-circle btn-sm hapus">
-                                                <i class="fas fa-trash"></i>
-                                                </a>
+                                                <!-- aksi edit dan hapus dihapus -->
                                             </td>
                                         </tr>
                                             <?php
@@ -136,7 +129,7 @@ else
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include_once("../layout/footer.php") ?>
+            <?php include_once("../layout/footer copy.php") ?>
             <!-- End of Footer -->
 
         </div>
