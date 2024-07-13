@@ -48,7 +48,7 @@ $title = 'nilai';
             <div id="content">
 
             <!-- top bar -->
-            <?php include_once("../layout/topbar.php") ?>
+            <?php include_once("../layout/topbar copy.php") ?>
               
 
                 <!-- Begin Page Content -->
@@ -62,7 +62,7 @@ $title = 'nilai';
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <!-- <h6 class="m-0 font-weight-bold text-primary">Basis Data Siswa</h6> -->
-                            <a href="nilai-tambah.php"><button type="button" class="btn btn-outline-primary rounded">Input</button></a>
+                            <a href="nilai-tambah copy.php"><button type="button" class="btn btn-outline-primary rounded">Input</button></a>
                         </div>
                         <div class="card-body">
                             <?php
@@ -102,7 +102,7 @@ $title = 'nilai';
                                             <td><?= $row['orang_tua']; ?></td>
                                             <td><?= $row['asal_sekolah'] ?></td>
                                             <td>
-                                                 <a href="tampil-nilai.php?nis=<?= $row['nis']?>" class="btn btn-info btn-circle btn-sm">
+                                                 <a href="tampil-nilai copy.php?nis=<?= $row['nis']?>" class="btn btn-info btn-circle btn-sm">
                                                 <i class="fas fa-edit"></i>
                                                 </a>
                                             </td>
@@ -130,7 +130,7 @@ else
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include_once("../layout/footer.php") ?>
+            <?php include_once("../layout/footer copy.php") ?>
             <!-- End of Footer -->
 
         </div>

@@ -50,7 +50,7 @@ if(isset($_POST["btn-simpan"])){
 				</div>
 				<br>
 				<?php
-                header('location: nilai.php');
+                header('location: nilai copy.php');
 			}
 		}
 		else{
@@ -113,7 +113,7 @@ if(isset($_POST["btn-simpan"])){
     <!-- Page Wrapper -->
     <div id="wrapper">
 <!-- sidebar -->
-       <?php include_once("../layout/sidebar 2.php") ?>
+       <?php include_once("../layout/sidebar copy.php") ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -122,7 +122,7 @@ if(isset($_POST["btn-simpan"])){
             <div id="content">
 
             <!-- top bar -->
-            <?php include_once("../layout/topbar.php") ?>
+            <?php include_once("../layout/topbar copy.php") ?>
               
 
                 <!-- Begin Page Content -->
@@ -191,7 +191,7 @@ if(isset($_POST["btn-simpan"])){
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include_once("../layout/footer.php") ?>
+            <?php include_once("../layout/footer copy.php") ?>
             <!-- End of Footer -->
 
         </div>
