@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2024 at 02:53 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 13 Jul 2024 pada 13.52
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `guru`
+-- Struktur dari tabel `guru`
 --
 
 CREATE TABLE `guru` (
@@ -37,7 +37,7 @@ CREATE TABLE `guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `guru`
+-- Dumping data untuk tabel `guru`
 --
 
 INSERT INTO `guru` (`nip`, `kd_mp`, `nama_guru`, `alamat`, `jenis_kelamin`, `agama`) VALUES
@@ -57,7 +57,7 @@ INSERT INTO `guru` (`nip`, `kd_mp`, `nama_guru`, `alamat`, `jenis_kelamin`, `aga
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mata_pelajaran`
+-- Struktur dari tabel `mata_pelajaran`
 --
 
 CREATE TABLE `mata_pelajaran` (
@@ -66,7 +66,7 @@ CREATE TABLE `mata_pelajaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `mata_pelajaran`
+-- Dumping data untuk tabel `mata_pelajaran`
 --
 
 INSERT INTO `mata_pelajaran` (`kd_mp`, `nama_mp`) VALUES
@@ -86,19 +86,19 @@ INSERT INTO `mata_pelajaran` (`kd_mp`, `nama_mp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nilai`
+-- Struktur dari tabel `nilai`
 --
 
 CREATE TABLE `nilai` (
   `nis` varchar(8) NOT NULL,
   `kd_mp` int(11) NOT NULL,
-  `semester` enum('1','2','3,'4','5','6',) DEFAULT NULL,
+  `semester` enum('1','2') DEFAULT NULL,
   `nilai` int(3) DEFAULT NULL,
   `predikat` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `nilai`
+-- Dumping data untuk tabel `nilai`
 --
 
 INSERT INTO `nilai` (`nis`, `kd_mp`, `semester`, `nilai`, `predikat`) VALUES
@@ -150,14 +150,14 @@ INSERT INTO `nilai` (`nis`, `kd_mp`, `semester`, `nilai`, `predikat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `siswa`
+-- Struktur dari tabel `siswa`
 --
 
 CREATE TABLE `siswa` (
   `nis` varchar(8) NOT NULL,
   `nama` varchar(30) NOT NULL,
   `alamat` varchar(30) DEFAULT NULL,
-  `tingkat` enum('1','2','3') NOT NULL,
+  `kelas` enum('1','2','3') NOT NULL,
   `tanggal_lahir` date DEFAULT NULL,
   `jenis_kelamin` enum('L','P') DEFAULT NULL,
   `agama` enum('ISLAM','PROTESTAN','KATHOLIK','HINDU','BUDHA','KONGHUCU','LAINNYA') DEFAULT NULL,
@@ -166,116 +166,69 @@ CREATE TABLE `siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `siswa`
+-- Dumping data untuk tabel `siswa`
 --
 
-INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `tingkat`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `orang_tua`, `asal_sekolah`) VALUES
-('77228601', 'akmal', 'Jl. Cimarantes ', '1', '2005-02-05', 'L', 'ISLAM', 'Joko', 'SMAN 1 Kota Tangerang'),
-('77241560', 'alika', 'Jl. Garut Tasik', '2', '2007-07-17', 'P', 'ISLAM', 'Tono', 'SDN Ngamplang Sari 4'),
-('77287165', 'siti', 'Jl. Margalaksana', '2', '2007-08-10', 'P', 'ISLAM', 'Jakaria', 'SDN Ngamplang Sari 4'),
-('77288132', 'adi', 'Jl. Tarogong', '3', '2008-08-18', 'L', 'ISLAM', 'Hasan', 'SDN Ngamplang Sari 4'),
-('87528528', 'Daffa', 'Baleendah', '1', '2022-07-02', 'L', 'ISLAM', 'Orang Tua tapi yang botol', 'SDN Balebale');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_admin`
---
-
-CREATE TABLE `tb_admin` (
-  `email` varchar(100) NOT NULL,
-  `password` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tb_admin`
---
-
-INSERT INTO `tb_admin` (`email`, `password`) VALUES
-('admin@aga.com', '123');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_dosen`
---
-
-CREATE TABLE `tb_dosen` (
-  `email` varchar(100) NOT NULL,
-  `password` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tb_dosen`
---
-
-INSERT INTO `tb_dosen` (`email`, `password`) VALUES
-('dosen@aga.com', '123');
+INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `kelas`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `orang_tua`, `asal_sekolah`) VALUES
+('2302003', 'Adam Al Faathih Febriano', 'kutabumi ', '', '2005-02-02', 'L', 'ISLAM', '', 'Politeknik Gajah Tunggal'),
+('77228601', 'akmal', 'Jl. Cimarantes ', '', '2005-02-05', 'L', 'ISLAM', 'Joko', 'SMAN 1 Kota Tangerang'),
+('77241560', 'alika', 'Jl. Garut Tasik', '', '2007-07-17', 'P', 'ISLAM', 'Tono', 'SDN Ngamplang Sari 4'),
+('77287165', 'siti', 'Jl. Margalaksana', '', '2007-08-10', 'P', 'ISLAM', 'Jakaria', 'SDN Ngamplang Sari 4'),
+('77288132', 'adi', 'Jl. Tarogong', '', '2008-08-18', 'L', 'ISLAM', 'Hasan', 'SDN Ngamplang Sari 4'),
+('87528528', 'Daffa', 'Baleendah', '', '2022-07-02', 'L', 'ISLAM', 'Orang Tua tapi yang botol', 'SDN Balebale');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `guru`
+-- Indeks untuk tabel `guru`
 --
 ALTER TABLE `guru`
   ADD PRIMARY KEY (`nip`),
   ADD KEY `kd_mp` (`kd_mp`);
 
 --
--- Indexes for table `mata_pelajaran`
+-- Indeks untuk tabel `mata_pelajaran`
 --
 ALTER TABLE `mata_pelajaran`
   ADD PRIMARY KEY (`kd_mp`);
 
 --
--- Indexes for table `nilai`
+-- Indeks untuk tabel `nilai`
 --
 ALTER TABLE `nilai`
   ADD KEY `nis` (`nis`),
   ADD KEY `kd_mp` (`kd_mp`);
 
 --
--- Indexes for table `siswa`
+-- Indeks untuk tabel `siswa`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`nis`);
 
 --
--- Indexes for table `tb_admin`
---
-ALTER TABLE `tb_admin`
-  ADD PRIMARY KEY (`email`);
-
---
--- Indexes for table `tb_dosen`
---
-ALTER TABLE `tb_dosen`
-  ADD PRIMARY KEY (`email`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `mata_pelajaran`
+-- AUTO_INCREMENT untuk tabel `mata_pelajaran`
 --
 ALTER TABLE `mata_pelajaran`
   MODIFY `kd_mp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `guru`
+-- Ketidakleluasaan untuk tabel `guru`
 --
 ALTER TABLE `guru`
   ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`kd_mp`) REFERENCES `mata_pelajaran` (`kd_mp`);
 
 --
--- Constraints for table `nilai`
+-- Ketidakleluasaan untuk tabel `nilai`
 --
 ALTER TABLE `nilai`
   ADD CONSTRAINT `nilai_ibfk_3` FOREIGN KEY (`nis`) REFERENCES `siswa` (`nis`) ON DELETE CASCADE,
