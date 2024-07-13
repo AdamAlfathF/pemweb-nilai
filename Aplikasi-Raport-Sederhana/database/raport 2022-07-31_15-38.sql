@@ -92,7 +92,7 @@ INSERT INTO `mata_pelajaran` (`kd_mp`, `nama_mp`) VALUES
 CREATE TABLE `nilai` (
   `nis` varchar(8) NOT NULL,
   `kd_mp` int(11) NOT NULL,
-  `semester` enum('1','2') DEFAULT NULL,
+  `semester` enum('1','2','3,'4','5','6',) DEFAULT NULL,
   `nilai` int(3) DEFAULT NULL,
   `predikat` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
