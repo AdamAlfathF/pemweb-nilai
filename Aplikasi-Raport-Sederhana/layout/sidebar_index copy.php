@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item <?php if($title == 'dashboard') echo "active" ?>">
-        <a class="nav-link" href="index2.php">
+        <a class="nav-link" href="index2 copy.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Menu Utama</span></a>
     </li>
