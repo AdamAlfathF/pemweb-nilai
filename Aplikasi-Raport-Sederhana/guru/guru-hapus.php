@@ -3,7 +3,7 @@ include_once("../functions.php");
 
 $nip = $_GET['nip'];
 
-$query = "DELETE FROM guru WHERE nip='$nip'";
+$query = "DELETE FROM dosen WHERE nip='$nip'";
 
 $execute = bisa($con, $query);
 
