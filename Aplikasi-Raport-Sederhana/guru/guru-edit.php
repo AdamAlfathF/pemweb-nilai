@@ -6,19 +6,19 @@ $nip = $_GET['nip'];
 $agama = ['ISLAM', 'PROTESTAN', 'KATHOLIK', 'HINDU', 'BUDHA', 'KONGHUCU', 'LAINNYA'];
 $jenis = ['L', 'P'];
 
-$query = "SELECT * FROM Dosen WHERE nip='$nip'";
+$query = "SELECT * FROM guru WHERE nip='$nip'";
 $ubah = ambilsatubaris($con, $query);
 
 
 if(isset($_POST['btn-ubah'])){
     $kd_mp    = $_POST['kd_mp'];
-     $nama          = $_POST['nama_dosen'];
+    $nama          = $_POST['nama_guru'];
      $alamat          = $_POST['alamat'];
      $jenis_kelamin = $_POST['jenis_kelamin'];
      $agama = $_POST['agama'];
      
 
-    $query = "UPDATE dosen SET kd_mp = '$kd_mp', nama_dosen = '$nama', alamat = '$alamat', jenis_kelamin = '$jenis_kelamin', agama = '$agama' WHERE nip = '$nip'";
+     $query = "UPDATE guru SET kd_mp = '$kd_mp', nama_guru = '$nama', alamat = '$alamat', jenis_kelamin = '$jenis_kelamin', agama = '$agama' WHERE nip = '$nip'";
      $execute = bisa($con,$query);
      if($execute == 1){
         header('location: guru.php');
@@ -112,7 +112,7 @@ if(isset($_POST['btn-ubah'])){
                     </div>
                     <div class="form-group">
                         <label>Nama Lengkap</label>
-                        <input type="text" name="nama_dosen" value="<?= $ubah['nama_dosen'];?>" class="form-control">
+                        <input type="text" name="nama_guru" value="<?= $ubah['nama_guru'];?>" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Alamat</label>
