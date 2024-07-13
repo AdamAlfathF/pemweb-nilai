@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'guru';
+$title = 'Dosen';
 if(isset($_POST['btn-simpan'])){
      $nip           = $_POST['nip'];
      $kode_mp       = $_POST['kd_mp'];
@@ -74,7 +74,7 @@ if(isset($_POST['btn-simpan'])){
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Tambah Guru</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Tambah Dosen</h1>
 
                     <!-- data table siswa -->
                       <!-- DataTales Example -->
