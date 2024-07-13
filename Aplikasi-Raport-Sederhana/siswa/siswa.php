@@ -13,7 +13,7 @@ $title = 'mahasiswa';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Siswa</title>
+    <title>Mahasiswa</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@ $title = 'mahasiswa';
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Tampil Siswa</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Tampil Mahasiswa</h1>
 
                     <!-- data table siswa -->
                       <!-- DataTales Example -->

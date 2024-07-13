@@ -86,7 +86,7 @@ if(isset($_POST["btn-simpan"])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Siswa</title>
+    <title>Mahasiswa</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -141,7 +141,7 @@ if(isset($_POST["btn-simpan"])){
                         <div class="card-body">
                              <form method="post" action="">
                     <div class="form-group">
-                        <label>Nama Siswa</label>
+                        <label>Nama Mahasiswa</label>
                         <select name="nis" class="form-control">
                         <?php
                                 $datasiswa=getListSiswa();

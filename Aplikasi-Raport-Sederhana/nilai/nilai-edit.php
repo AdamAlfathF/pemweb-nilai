@@ -106,7 +106,7 @@ if(isset($_POST['btn-ubah'])){
                         <div class="card-body">
                     <form method="post" action="">
                     <div class="form-group">
-                        <label>Nama Siswa</label>
+                        <label>Nama Mahasiswa</label>
                         <input type="text" name="nama" id="" class="form-control" value="<?= $ubah['nama'] ?>" readonly>
                     </div>
                    <div class="form-group">

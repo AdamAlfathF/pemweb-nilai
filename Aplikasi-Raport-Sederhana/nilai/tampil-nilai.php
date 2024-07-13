@@ -13,7 +13,7 @@ $tampil = ambilsatubaris($con, $query);
 }
 ?>
 <!DOCTYPE html>
-<html><head><title>Nilai Siswa</title>
+<html><head><title>Nilai Mahasiswa</title>
 
 <!-- Custom fonts for this template-->
 <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -59,7 +59,7 @@ rel="stylesheet">
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Nilai Siswa</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Nilai Mahasiswa</h1>
 
                     <div class="row mb-3 ">
                     <label class="col-sm-2 col-form-label">NIS</label>
@@ -68,7 +68,7 @@ rel="stylesheet">
                     </div>
                     </div>
                     <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Nama Siswa</label>
+                    <label class="col-sm-2 col-form-label">Nama Mahasiswa</label>
                     <div class="col-sm-4">
                     <input type="text" class="form-control" value="<?= $tampil['nama'] ?>" readonly>
                     </div>

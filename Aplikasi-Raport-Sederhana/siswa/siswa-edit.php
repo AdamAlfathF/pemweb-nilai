@@ -44,7 +44,7 @@ if(isset($_POST['btn-ubah'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Siswa</title>
+    <title>Mahasiswa</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -85,7 +85,7 @@ if(isset($_POST['btn-ubah'])){
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Ubah Data Siswa</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Ubah Data Mahasiswa</h1>
 
                     <!-- data table siswa -->
                       <!-- DataTales Example -->
