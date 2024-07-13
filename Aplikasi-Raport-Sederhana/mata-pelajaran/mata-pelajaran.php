@@ -67,7 +67,7 @@ $title = 'mata-kuliah';
                             <?php
                             $db=dbConnect();
                             if($db->connect_errno==0){
-                            $sql="SELECT * FROM mata_kuliah";
+                                $sql="SELECT * FROM mata_pelajaran";
                             $res=$db->query($sql);
                             if($res){
                             ?>
@@ -86,8 +86,8 @@ $title = 'mata-kuliah';
                                         foreach($data as $row){
                                         ?>
                                         <tr>
-                                            <td><?= $row['kd_mk']; ?></td>
-                                            <td><?= $row['nama_mk']; ?></td>
+                                        <td><?= $row['kd_mp']; ?></td>
+                                        <td><?= $row['nama_mp']; ?></td>
                                             <td>
                                                 <!-- a href -->
                                                 <a href="mata-pelajaran-edit.php?kd_mp=<?= $row['kd_mp']?>" class="btn btn-success btn-circle btn-sm">

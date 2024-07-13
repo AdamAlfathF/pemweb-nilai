@@ -3,9 +3,9 @@ include_once("../functions.php");
 $title = 'mata-kuliah';
 if(isset($_POST['btn-simpan'])){
      
-    $nama_mk          = $_POST['nama_mk'];
+    $nama_mp          = $_POST['nama_mp'];
 
-    $query = "INSERT INTO mata_kuliah (nama_mk) values ('$nama_mk')";
+    $query = "INSERT INTO mata_pelajaran (nama_mp) values ('$nama_mp')";
      $execute = bisa($con,$query);
      if($execute == 1){
         header('location: mata-pelajaran.php');

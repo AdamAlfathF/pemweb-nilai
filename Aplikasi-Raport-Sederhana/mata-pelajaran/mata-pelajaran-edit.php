@@ -4,14 +4,14 @@ $title = 'mata-kuliah';
 
 $kd_mp = $_GET['kd_mp'];
 
-$query = "SELECT * FROM mata_kuliah where kd_mp = '$kd_mp'";
+$query = "SELECT * FROM mata_pelajaran where kd_mp = '$kd_mp'";
 $ubah =  ambilsatubaris($con, $query);
 
 if(isset($_POST['btn-ubah'])){
      
     $nama_mp          = $_POST['nama_mp'];
 
-    $query = "UPDATE mata_kuliah SET nama_mp='$nama_mp' WHERE kd_mp='$kd_mp'";
+    $query = "UPDATE mata_pelajaran SET nama_mp='$nama_mp' WHERE kd_mp='$kd_mp'";
 
     $execute = bisa($con,$query);
      if($execute == 1){
