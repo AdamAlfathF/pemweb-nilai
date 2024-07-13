@@ -21,7 +21,7 @@ if(isset($_POST['btn-ubah'])){
     $query = "UPDATE dosen SET kd_mp = '$kd_mp', nama_dosen = '$nama', alamat = '$alamat', jenis_kelamin = '$jenis_kelamin', agama = '$agama' WHERE nip = '$nip'";
      $execute = bisa($con,$query);
      if($execute == 1){
-        header('location: dosen.php');
+        header('location: guru.php');
      }else{
          echo "Gagal Ubah Data";
      }
