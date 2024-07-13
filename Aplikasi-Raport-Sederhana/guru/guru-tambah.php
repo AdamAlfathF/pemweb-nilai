@@ -4,12 +4,12 @@ $title = 'guru';
 if(isset($_POST['btn-simpan'])){
      $nip           = $_POST['nip'];
      $kode_mp       = $_POST['kd_mp'];
-     $nama_guru     = $_POST['nama_guru'];
+     $nama_dosen    = $_POST['nama_dosen'];
      $alamat        = $_POST['alamat'];
      $jenis_kelamin = $_POST['jenis_kelamin'];
      $agama         = $_POST['agama'];
 
-    $query = "INSERT INTO guru VALUES ('$nip','$kode_mp','$nama_guru','$alamat','$jenis_kelamin','$agama')";
+    $query = "INSERT INTO dosen VALUES ('$nip','$kode_mp','$nama_dosen','$alamat','$jenis_kelamin','$agama')";
      $execute = bisa($con,$query);
      if($execute == 1){
          header('location: guru.php');   
@@ -31,7 +31,7 @@ if(isset($_POST['btn-simpan'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Guru</title>
+    <title>dosen</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
