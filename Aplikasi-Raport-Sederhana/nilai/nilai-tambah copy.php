@@ -113,7 +113,7 @@ if(isset($_POST["btn-simpan"])){
     <!-- Page Wrapper -->
     <div id="wrapper">
 <!-- sidebar -->
-       <?php include_once("../layout/sidebar.php") ?>
+       <?php include_once("../layout/sidebar 2.php") ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">

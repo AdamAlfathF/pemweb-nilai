@@ -39,7 +39,7 @@ $title = 'nilai';
     <!-- Page Wrapper -->
     <div id="wrapper">
 <!-- sidebar -->
-       <?php include_once("../layout/sidebar.php") ?>
+       <?php include_once("../layout/sidebar copy.php") ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
