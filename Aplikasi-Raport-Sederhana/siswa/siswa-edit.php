@@ -3,7 +3,7 @@ include_once("../functions.php");
 $title = 'mahasiswa';
 $nis = $_GET['nis'];
 
-$query = "SELECT * FROM mahasiswa WHERE nis='$nis'";
+$query = "SELECT * FROM siswa WHERE nis='$nis'";
 $ubah = ambilsatubaris($con, $query);
 
 $kelas = ['VII', 'VIII', 'IX'];
@@ -20,7 +20,7 @@ if(isset($_POST['btn-ubah'])){
      $orangtua = $_POST['orang_tua'];
      $asal_sekolah = $_POST['asal_sekolah'];
 
-    $query = "UPDATE mahasiswa SET nama = '$nama', alamat = '$alamat', kelas = '$kelas', tanggal_lahir = '$tanggal', 
+    $query = "UPDATE siswa SET nama = '$nama', alamat = '$alamat', kelas = '$kelas', tanggal_lahir = '$tanggal', 
     jenis_kelamin = '$jenis_kelamin', agama = '$agama', orang_tua = '$orangtua', asal_sekolah = '$asal_sekolah' 
     WHERE nis = '$nis'";
      $execute = bisa($con,$query);

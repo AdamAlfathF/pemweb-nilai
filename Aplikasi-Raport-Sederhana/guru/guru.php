@@ -92,7 +92,7 @@ $title = 'dosen';
                                         <tr>
                                             <td><?php echo $row['nip']; ?></td>
                                             <td><?php echo $row['kd_mp']; ?></td>
-                                            <td><?php echo $row['nama_dosen']; ?></td>
+                                            <td><?php echo $row['nama_guru']; ?></td>
                                             <td><?php echo $row['alamat'];?></td>
                                             <td><?php echo $row['jenis_kelamin']; ?></td>
                                             <td><?php echo $row['agama']; ?></td>

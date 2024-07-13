@@ -5,7 +5,7 @@ include_once("../functions.php");
 
 $nis = $_GET['nis'];
 
-$query = "DELETE FROM mahasiswa WHERE nis='$nis'";
+$query = "DELETE FROM siswa WHERE nis='$nis'";
 
 $execute = bisa($con, $query);
 

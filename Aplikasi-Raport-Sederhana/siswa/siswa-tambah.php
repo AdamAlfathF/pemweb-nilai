@@ -12,8 +12,7 @@ if(isset($_POST['btn-simpan'])){
      $orangtua = $_POST['orang_tua'];
      $asal_sekolah = $_POST['asal_sekolah'];
 
-    $query = "INSERT INTO mahasiswa VALUES ('$nis','$nama','$alamat','$kelas','$tanggal','$jenis_kelamin','$agama','$orangtua','$asal_sekolah')";
-     $execute = bisa($con,$query);
+     $query = "INSERT INTO siswa VALUES ('$nis','$nama','$alamat','$kelas','$tanggal','$jenis_kelamin','$agama','$orangtua','$asal_sekolah')";
      if($execute == 1){
          header('location: siswa.php');   
      }else{
