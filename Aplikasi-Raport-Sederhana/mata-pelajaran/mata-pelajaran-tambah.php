@@ -1,11 +1,11 @@
 <?php 
 include_once("../functions.php");
-$title = 'mata-pelajaran';
+$title = 'mata-kuliah';
 if(isset($_POST['btn-simpan'])){
      
-    $nama_mp          = $_POST['nama_mp'];
+    $nama_mk          = $_POST['nama_mk'];
 
-    $query = "INSERT INTO mata_pelajaran (nama_mp) values ('$nama_mp')";
+    $query = "INSERT INTO mata_kuliah (nama_mk) values ('$nama_mk')";
      $execute = bisa($con,$query);
      if($execute == 1){
         header('location: mata-pelajaran.php');
@@ -27,7 +27,7 @@ if(isset($_POST['btn-simpan'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mata Pelajaran</title>
+    <title>Mata Kuliah</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
