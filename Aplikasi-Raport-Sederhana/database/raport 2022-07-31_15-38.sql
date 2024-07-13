@@ -157,7 +157,7 @@ CREATE TABLE `siswa` (
   `nis` varchar(8) NOT NULL,
   `nama` varchar(30) NOT NULL,
   `alamat` varchar(30) DEFAULT NULL,
-  `kelas` enum('VII','VIII','IX') NOT NULL,
+  `tingkat` enum('1','2','3') NOT NULL,
   `tanggal_lahir` date DEFAULT NULL,
   `jenis_kelamin` enum('L','P') DEFAULT NULL,
   `agama` enum('ISLAM','PROTESTAN','KATHOLIK','HINDU','BUDHA','KONGHUCU','LAINNYA') DEFAULT NULL,
@@ -169,12 +169,12 @@ CREATE TABLE `siswa` (
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `kelas`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `orang_tua`, `asal_sekolah`) VALUES
-('77228601', 'akmal', 'Jl. Cimarantes ', 'VII', '2005-02-05', 'L', 'ISLAM', 'Joko', 'SMAN 1 Kota Tangerang'),
-('77241560', 'alika', 'Jl. Garut Tasik', 'VII', '2007-07-17', 'P', 'ISLAM', 'Tono', 'SDN Ngamplang Sari 4'),
-('77287165', 'siti', 'Jl. Margalaksana', 'VII', '2007-08-10', 'P', 'ISLAM', 'Jakaria', 'SDN Ngamplang Sari 4'),
-('77288132', 'adi', 'Jl. Tarogong', 'VII', '2008-08-18', 'L', 'ISLAM', 'Hasan', 'SDN Ngamplang Sari 4'),
-('87528528', 'Daffa', 'Baleendah', 'VII', '2022-07-02', 'L', 'ISLAM', 'Orang Tua tapi yang botol', 'SDN Balebale');
+INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `tingkat`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `orang_tua`, `asal_sekolah`) VALUES
+('77228601', 'akmal', 'Jl. Cimarantes ', '1', '2005-02-05', 'L', 'ISLAM', 'Joko', 'SMAN 1 Kota Tangerang'),
+('77241560', 'alika', 'Jl. Garut Tasik', '2', '2007-07-17', 'P', 'ISLAM', 'Tono', 'SDN Ngamplang Sari 4'),
+('77287165', 'siti', 'Jl. Margalaksana', '2', '2007-08-10', 'P', 'ISLAM', 'Jakaria', 'SDN Ngamplang Sari 4'),
+('77288132', 'adi', 'Jl. Tarogong', '3', '2008-08-18', 'L', 'ISLAM', 'Hasan', 'SDN Ngamplang Sari 4'),
+('87528528', 'Daffa', 'Baleendah', '1', '2022-07-02', 'L', 'ISLAM', 'Orang Tua tapi yang botol', 'SDN Balebale');
 
 -- --------------------------------------------------------
 

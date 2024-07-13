@@ -6,7 +6,7 @@ $nis = $_GET['nis'];
 $query = "SELECT * FROM siswa WHERE nis='$nis'";
 $ubah = ambilsatubaris($con, $query);
 
-$kelas = ['VII', 'VIII', 'IX'];
+$kelas = ['I', 'II', 'III'];
 $agama = ['ISLAM', 'PROTESTAN', 'KATHOLIK', 'HINDU', 'BUDHA', 'KONGHUCU', 'LAINNYA'];
 $jenis = ['L', 'P'];
 
@@ -109,8 +109,8 @@ if(isset($_POST['btn-ubah'])){
                         <textarea name="alamat" class="form-control"><?= $ubah['alamat'];?> </textarea>
                     </div>
                     <div class="form-group">
-                        <label>Kelas</label>
-                        <select name="kelas" class="form-control">
+                        <label>Tingkat</label>
+                        <select name="" class="form-control">
                             <?php foreach ($kelas as $key) : ?>
                                 <?php if ($key == $ubah['kelas']) : ?>
                                     <option value="<?= $key ?>" selected><?= $key ?></option>

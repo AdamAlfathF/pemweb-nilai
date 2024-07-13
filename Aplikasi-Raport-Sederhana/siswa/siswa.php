@@ -78,7 +78,7 @@ $title = 'mahasiswa';
                                             <th>NIS</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
-                                            <th>Kelas</th>
+                                            <th>Tingkat</th>
                                             <th>Tanggal Lahir</th>
                                             <th>J K </th>
                                             <th>Agama</th>

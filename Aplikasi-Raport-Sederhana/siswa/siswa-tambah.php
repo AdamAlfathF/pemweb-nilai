@@ -100,11 +100,11 @@ if(isset($_POST['btn-simpan'])){
                         <textarea name="alamat" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Kelas</label>
+                        <label>Tingkat</label>
                         <select name="kelas" class="form-control">
-                            <option value="VII">VII</option>
-                            <option value="VIII">VIII</option>
-                            <option value="IX">IX</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
                         </select>
                     </div>
                     <div class="form-group">
