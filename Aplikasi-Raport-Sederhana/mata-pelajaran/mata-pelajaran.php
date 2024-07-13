@@ -54,7 +54,7 @@ $title = 'mata-kuliah';
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Tampil Mata Pelajaran</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Tampil Mata Kuliah</h1>
 
                     <!-- data table siswa -->
                       <!-- DataTales Example -->

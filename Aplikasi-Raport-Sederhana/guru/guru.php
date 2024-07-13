@@ -54,7 +54,7 @@ $title = 'dosen';
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Tampil Guru</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Tampil Dosen</h1>
 
                     <!-- data table siswa -->
                       <!-- DataTales Example -->
@@ -76,7 +76,7 @@ $title = 'dosen';
                                     <thead>
                                         <tr>
                                             <th>NIP</th>
-                                            <th>Kode MP</th>
+                                            <th>Kode MK</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>Jenis Kelamin</th>

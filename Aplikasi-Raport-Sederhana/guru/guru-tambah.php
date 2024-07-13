@@ -90,7 +90,7 @@ if(isset($_POST['btn-simpan'])){
                         <input type="text" name="nip" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Kode MP</label>
+                        <label>Kode MK</label>
                     <select name="kd_mp" class="form-control" required>
 		            <option value="">Mata Pelajaran</option>
 		            <?php
