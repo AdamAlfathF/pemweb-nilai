@@ -1,13 +1,11 @@
 <?php 
-	session_start();
+    session_start();
  
-	// cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['level']==""){
-		header("location:index.php?pesan=gagal");
-	}
- 
-	?>
-
+    // cek apakah yang mengakses halaman ini sudah login
+    if($_SESSION['level']==""){
+        header("location:index.php?pesan=gagal");
+    }
+?>
 <?php 
 include_once("functions.php");
 $title = 'dashboard';
@@ -35,11 +33,9 @@ $title = 'dashboard';
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
 
-    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 
 </head>
 
@@ -72,9 +68,8 @@ $title = 'dashboard';
                     <!-- Content Row -->
                     <div class="row">
 
-                       
- <!-- Earnings (Monthly) Card Example -->
- <div class="col-xl-3 col-md-6 mb-4">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -88,8 +83,7 @@ $title = 'dashboard';
                                                         echo $row['jumlahSiswa'];
                                                  }
                                              ?>
-
-                                        </div>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -99,8 +93,7 @@ $title = 'dashboard';
                             </div>
                         </div>
                         
-
-                          <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -168,7 +161,6 @@ $title = 'dashboard';
 
     <script src="assets/js/script.js"></script>
 
-   
 </body>
 
 </html>
