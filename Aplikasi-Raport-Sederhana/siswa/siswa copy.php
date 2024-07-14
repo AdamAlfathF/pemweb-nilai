@@ -24,7 +24,7 @@ $title = 'mahasiswa';
     <!-- Custom styles for this template-->
     <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
 
-      <!-- Custom styles for this page -->
+    <!-- Custom styles for this page -->
     <link href="../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -35,102 +35,98 @@ $title = 'mahasiswa';
 
 <body id="page-top">
 
-    <?php 
-	session_start();
- 
-	// cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['level']==""){
-		header("location:../index.php?pesan=gagal");
-	}
- 
-	?>
+<?php 
+session_start();
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-<!-- sidebar -->
-       <?php include_once("../layout/sidebar copy.php") ?>
+// cek apakah yang mengakses halaman ini sudah login
+if($_SESSION['level']==""){
+    header("location:../index.php?pesan=gagal");
+}
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+?>
 
-            <!-- Main Content -->
-            <div id="content">
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <!-- sidebar -->
+    <?php include_once("../layout/sidebar copy.php") ?>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
 
             <!-- top bar -->
             <?php include_once("../layout/topbar copy.php") ?>
-              
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Tampil Mahasiswa</h1>
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 text-gray-800">Tampil Mahasiswa</h1>
 
-                    <!-- data table siswa -->
-                      <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <!-- <h6 class="m-0 font-weight-bold text-primary">Basis Data Siswa</h6> -->
-                            <!-- Tombol tambah dihapus -->
-                        </div>
-                        <div class="card-body">
-                            <?php
-                            $db=dbConnect();
-                            if($db->connect_errno==0){
-                            $sql="SELECT * FROM siswa";
-                            $res=$db->query($sql);
-                            if($res){
-                            ?>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>NIM</th>
-                                            <th>Nama</th>
-                                            <th>Alamat</th>
-                                            <th>Tingkat</th>
-                                            <th>Tanggal Lahir</th>
-                                            <th>J K </th>
-                                            <th>Agama</th>
-                                            <th>Orang Tua</th>
-                                            <th>Asal Sekolah</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        $data = $res->fetch_all(MYSQLI_ASSOC);
-                                        foreach($data as $row){
-                                        ?>
-                                        <tr>
-                                            <td><?= $row['nis']; ?></td>
-                                            <td><?= $row['nama']; ?></td>
-                                            <td><?= $row['alamat']; ?></td>
-                                            <td><?= $row['kelas']; ?></td>
-                                            <td><?= $row['tanggal_lahir'];?></td>
-                                            <td><?= $row['jenis_kelamin']; ?></td>
-                                            <td><?= $row['agama']; ?></td>
-                                            <td><?= $row['orang_tua']; ?></td>
-                                            <td><?= $row['asal_sekolah'] ?></td>
-                                            <td>
-                                                <!-- aksi edit dan hapus dihapus -->
-                                            </td>
-                                        </tr>
-                                            <?php
-                                    }
+                <!-- data table siswa -->
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <!-- <h6 class="m-0 font-weight-bold text-primary">Basis Data Siswa</h6> -->
+                        <!-- Tombol tambah dihapus -->
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        $db=dbConnect();
+                        if($db->connect_errno==0){
+                        $sql="SELECT * FROM siswa";
+                        $res=$db->query($sql);
+                        if($res){
+                        ?>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>NIM</th>
+                                        <th>Nama</th>
+                                        <th>Alamat</th>
+                                        <th>Tingkat</th>
+                                        <th>Tanggal Lahir</th>
+                                        <th>J K</th>
+                                        <th>Agama</th>
+                                        <th>Orang Tua</th>
+                                        <th>Asal Sekolah</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $data = $res->fetch_all(MYSQLI_ASSOC);
+                                    foreach($data as $row){
                                     ?>
-                                    </tbody>
-                                </table>
-                                	<?php
-		$res->free();
-	}else
-		echo "Gagal Eksekusi SQL".(DEVELOPMENT?" : ".$db->error:"")."<br>";
-}
-else
-	echo "Gagal koneksi".(DEVELOPMENT?" : ".$db->connect_error:"")."<br>";
-?>
-                            </div>
+                                    <tr>
+                                        <td><?= $row['nis']; ?></td>
+                                        <td><?= $row['nama']; ?></td>
+                                        <td><?= $row['alamat']; ?></td>
+                                        <td><?= $row['kelas']; ?></td>
+                                        <td><?= $row['tanggal_lahir'];?></td>
+                                        <td><?= $row['jenis_kelamin']; ?></td>
+                                        <td><?= $row['agama']; ?></td>
+                                        <td><?= $row['orang_tua']; ?></td>
+                                        <td><?= $row['asal_sekolah'] ?></td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
+                                </tbody>
+                            </table>
+                            <?php
+                            $res->free();
+                            } else {
+                                echo "Gagal Eksekusi SQL".(DEVELOPMENT?" : ".$db->error:"")."<br>";
+                            }
+                        } else {
+                            echo "Gagal koneksi".(DEVELOPMENT?" : ".$db->connect_error:"")."<br>";
+                        }
+                        ?>
                         </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -183,7 +179,6 @@ else
     <!-- Custom scripts for all pages-->
     <script src="../assets/js/sb-admin-2.min.js"></script>
 
-    
     <!-- Page level plugins -->
     <script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
