@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'mata-kuliah';
+$title = 'mata-pelajaran';
 ?>
 <!DOCTYPE html>
 <html lang="en">
