@@ -1,4 +1,16 @@
 <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['level']==""){
+		header("location:../index.php?pesan=gagal");
+	}
+ 
+	?>
+
+
+
+<?php 
 include_once("../functions.php");
 $title = 'nilai';
 
@@ -32,7 +44,7 @@ if(isset($_POST['btn-ubah'])){
 
     $execute = bisa($con,$query);
      if($execute == 1){
-        header('location: nilai.php');
+        header('location: nilai copy.php');
      }else{
          echo "Gagal Tambah Data";
      }
@@ -87,7 +99,7 @@ if(isset($_POST['btn-ubah'])){
             <div id="content">
 
             <!-- top bar -->
-            <?php include_once("../layout/topbar.php") ?>
+            <?php include_once("../layout/topbar copy.php") ?>
               
 
                 <!-- Begin Page Content -->
@@ -131,7 +143,7 @@ if(isset($_POST['btn-ubah'])){
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include_once("../layout/footer.php") ?>
+            <?php include_once("../layout/footer copy.php") ?>
             <!-- End of Footer -->
 
         </div>

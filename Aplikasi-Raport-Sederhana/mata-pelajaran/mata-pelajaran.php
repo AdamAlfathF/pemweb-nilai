@@ -1,4 +1,16 @@
 <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['level']==""){
+		header("location:../index.php?pesan=gagal");
+	}
+ 
+	?>
+
+
+
+<?php 
 include_once("../functions.php");
 $title = 'mata-pelajaran';
 ?>
@@ -34,17 +46,6 @@ $title = 'mata-pelajaran';
 </head>
 
 <body id="page-top">
-
-<?php 
-	session_start();
- 
-	// cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['level']==""){
-		header("location:../index.php?pesan=gagal");
-	}
- 
-	?>
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 <!-- sidebar -->

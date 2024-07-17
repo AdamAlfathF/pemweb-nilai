@@ -1,4 +1,16 @@
 <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['level']==""){
+		header("location:../index.php?pesan=gagal");
+	}
+ 
+	?>
+
+
+
+<?php 
 include_once("../functions.php");
 $title = 'siswa';
 if(isset($_POST['btn-simpan'])){
@@ -57,7 +69,6 @@ if(isset($_POST['btn-simpan'])){
 </head>
 
 <body id="page-top">
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 <!-- sidebar -->
