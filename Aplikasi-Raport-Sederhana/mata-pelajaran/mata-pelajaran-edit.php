@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'mata-kuliah';
+$title = 'mata-pelajaran';
 
 $kd_mp = $_GET['kd_mp'];
 

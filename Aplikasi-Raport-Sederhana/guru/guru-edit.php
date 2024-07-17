@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'Dosen';
+$title = 'guru';
 $nip = $_GET['nip'];
 
 $agama = ['ISLAM', 'PROTESTAN', 'KATHOLIK', 'HINDU', 'BUDHA', 'KONGHUCU', 'LAINNYA'];

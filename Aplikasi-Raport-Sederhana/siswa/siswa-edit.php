@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'mahasiswa';
+$title = 'siswa';
 $nis = $_GET['nis'];
 
 $query = "SELECT * FROM siswa WHERE nis='$nis'";

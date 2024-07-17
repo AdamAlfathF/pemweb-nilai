@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'mahasiswa';
+$title = 'siswa';
 if(isset($_POST['btn-simpan'])){
      $nis    = $_POST['nis'];
      $nama          = $_POST['nama'];

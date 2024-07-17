@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'Dosen';
+$title = 'guru';
 if(isset($_POST['btn-simpan'])){
      $nip           = $_POST['nip'];
      $kode_mp       = $_POST['kd_mp'];

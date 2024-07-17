@@ -1,6 +1,6 @@
 <?php 
 include_once("../functions.php");
-$title = 'mata-kuliah';
+$title = 'mata-pelajaran';
 if(isset($_POST['btn-simpan'])){
      
     $nama_mp          = $_POST['nama_mp'];
