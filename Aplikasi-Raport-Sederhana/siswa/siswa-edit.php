@@ -6,32 +6,30 @@ $nis = $_GET['nis'];
 $query = "SELECT * FROM siswa WHERE nis='$nis'";
 $ubah = ambilsatubaris($con, $query);
 
-$kelas = ['1', '2', '3'];
+$kelas_list = ['1','2','3'];
 $agama = ['ISLAM', 'PROTESTAN', 'KATHOLIK', 'HINDU', 'BUDHA', 'KONGHUCU', 'LAINNYA'];
 $jenis = ['L', 'P'];
 
 if(isset($_POST['btn-ubah'])){
      $nama          = $_POST['nama'];
-     $alamat          = $_POST['alamat'];
-     $kelas       = $_POST['kelas'];
-     $tanggal = $_POST['tanggal'];
+     $alamat        = $_POST['alamat'];
+     $kelas         = $_POST['kelas'];
+     $tanggal       = $_POST['tanggal'];
      $jenis_kelamin = $_POST['jenis_kelamin'];
-     $agama = $_POST['agama'];
-     $orangtua = $_POST['orang_tua'];
-     $asal_sekolah = $_POST['asal_sekolah'];
+     $agama         = $_POST['agama'];
+     $orangtua      = $_POST['orang_tua'];
+     $asal_sekolah  = $_POST['asal_sekolah'];
 
     $query = "UPDATE siswa SET nama = '$nama', alamat = '$alamat', kelas = '$kelas', tanggal_lahir = '$tanggal', 
     jenis_kelamin = '$jenis_kelamin', agama = '$agama', orang_tua = '$orangtua', asal_sekolah = '$asal_sekolah' 
     WHERE nis = '$nis'";
-     $execute = bisa($con,$query);
+     $execute = bisa($con, $query);
      if($execute == 1){
         header('location: siswa.php');
      }else{
          echo "Gagal Ubah Data";
      }
- }
-
-
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,11 +53,10 @@ if(isset($_POST['btn-ubah'])){
     <!-- Custom styles for this template-->
     <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
 
-      <!-- Custom styles for this page -->
+    <!-- Custom styles for this page -->
     <link href="../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
@@ -68,8 +65,8 @@ if(isset($_POST['btn-ubah'])){
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-<!-- sidebar -->
-       <?php include_once("../layout/sidebar.php") ?>
+        <!-- sidebar -->
+        <?php include_once("../layout/sidebar.php") ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -77,9 +74,8 @@ if(isset($_POST['btn-ubah'])){
             <!-- Main Content -->
             <div id="content">
 
-            <!-- top bar -->
-            <?php include_once("../layout/topbar.php") ?>
-              
+                <!-- top bar -->
+                <?php include_once("../layout/topbar.php") ?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -88,81 +84,81 @@ if(isset($_POST['btn-ubah'])){
                     <h1 class="h3 mb-4 text-gray-800">Ubah Data Mahasiswa</h1>
 
                     <!-- data table siswa -->
-                      <!-- DataTales Example -->
+                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <!-- <h6 class="m-0 font-weight-bold text-primary">Basis Data Siswa</h6> -->
                             <a href="javascript:void(0)" onclick="window.history.back();" class="btn btn-primary box-title"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
                         </div>
                         <div class="card-body">
-                <form method="post" action="">
-                    <div class="form-group">
-                        <label>NIM</label>
-                        <input type="text" name="nis" value="<?= $ubah['nis'];?>" class="form-control" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label>Nama Lengkap</label>
-                        <input type="text" name="nama" value="<?= $ubah['nama'];?>" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Alamat</label>
-                        <textarea name="alamat" class="form-control"><?= $ubah['alamat'];?> </textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Tingkat</label>
-                        <select name="" class="form-control">
-                            <?php foreach ($kelas as $key) : ?>
-                                <?php if ($key == $ubah['kelas']) : ?>
-                                    <option value="<?= $key ?>" selected><?= $key ?></option>
-                                <?php else : ?>
-                                    <option value="<?= $key ?>"><?= $key ?></option>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Tanggal Lahir</label>
-                        <input type="date" name="tanggal" value="<?= $ubah['tanggal_lahir']; ?>" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Jenis Kelamin</label>
-                        <select name="jenis_kelamin" class="form-control">
-                            <?php foreach ($jenis as $key) : ?>
-                                <?php if ($key == $ubah['jenis_kelamin']) : ?>
-                                    <option value="<?= $key ?>" selected><?= $key ?></option>
-                                <?php else : ?>
-                                    <option value="<?= $key ?>"><?= $key ?></option>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Agama</label>
-                        <select name="agama" class="form-control">
-                            <?php foreach ($agama as $key) : ?>
-                                <?php if ($key == $ubah['agama']) : ?>
-                                    <option value="<?= $key ?>" selected><?= $key ?></option>
-                                <?php else : ?>
-                                    <option value="<?= $key ?>"><?= $key ?></option>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Nama Orang Tua</label>
-                        <input type="text" name="orang_tua" value="<?= $ubah['orang_tua']?>" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Asal Sekolah</label>
-                        <input type="text" name="asal_sekolah" value="<?= $ubah['asal_sekolah'] ?>" class="form-control">
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" name="btn-ubah" id="ubah" class="btn btn-primary">Ubah</button>
-                        <button type="reset" class="btn btn-danger">Reset</button>
-                    </div>
-                </form>
+                            <form method="post" action="">
+                                <div class="form-group">
+                                    <label>NIM</label>
+                                    <input type="text" name="nis" value="<?= $ubah['nis']; ?>" class="form-control" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nama Lengkap</label>
+                                    <input type="text" name="nama" value="<?= $ubah['nama']; ?>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Alamat</label>
+                                    <textarea name="alamat" class="form-control"><?= $ubah['alamat']; ?></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tingkat</label>
+                                    <select name="kelas" class="form-control">
+                                        <?php foreach ($kelas_list as $key) : ?>
+                                            <?php if ($key == $ubah['kelas']) : ?>
+                                                <option value="<?= $key ?>" selected><?= $key ?></option>
+                                            <?php else : ?>
+                                                <option value="<?= $key ?>"><?= $key ?></option>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tanggal Lahir</label>
+                                    <input type="date" name="tanggal" value="<?= $ubah['tanggal_lahir']; ?>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Jenis Kelamin</label>
+                                    <select name="jenis_kelamin" class="form-control">
+                                        <?php foreach ($jenis as $key) : ?>
+                                            <?php if ($key == $ubah['jenis_kelamin']) : ?>
+                                                <option value="<?= $key ?>" selected><?= $key ?></option>
+                                            <?php else : ?>
+                                                <option value="<?= $key ?>"><?= $key ?></option>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Agama</label>
+                                    <select name="agama" class="form-control">
+                                        <?php foreach ($agama as $key) : ?>
+                                            <?php if ($key == $ubah['agama']) : ?>
+                                                <option value="<?= $key ?>" selected><?= $key ?></option>
+                                            <?php else : ?>
+                                                <option value="<?= $key ?>"><?= $key ?></option>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nama Orang Tua</label>
+                                    <input type="text" name="orang_tua" value="<?= $ubah['orang_tua']; ?>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Asal Sekolah</label>
+                                    <input type="text" name="asal_sekolah" value="<?= $ubah['asal_sekolah']; ?>" class="form-control">
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" name="btn-ubah" id="ubah" class="btn btn-primary">Ubah</button>
+                                    <button type="reset" class="btn btn-danger">Reset</button>
+                                </div>
+                            </form>
                         </div>
-
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -214,7 +210,6 @@ if(isset($_POST['btn-ubah'])){
     <!-- Custom scripts for all pages-->
     <script src="../assets/js/sb-admin-2.min.js"></script>
 
-    
     <!-- Page level plugins -->
     <script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
