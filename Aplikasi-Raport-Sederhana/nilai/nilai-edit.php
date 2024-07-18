@@ -63,7 +63,7 @@ if(isset($_POST['btn-ubah'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mata Pelajaran</title>
+    <title>Mata Kuliah</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
