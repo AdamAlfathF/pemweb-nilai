@@ -26,7 +26,7 @@ $title = 'nilai';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mahasiswa</title>
+    <title>Nilai Mahasiswa</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
