@@ -62,7 +62,7 @@ rel="stylesheet">
                     <h1 class="h3 mb-4 text-gray-800">Nilai Mahasiswa</h1>
 
                     <div class="row mb-3 ">
-                    <label class="col-sm-2 col-form-label">NIS</label>
+                    <label class="col-sm-2 col-form-label">NIM</label>
                     <div class="col-sm-2">
                     <input type="text" class="form-control" value="<?= $tampil['nis']  ?>" readonly>
                     </div>
