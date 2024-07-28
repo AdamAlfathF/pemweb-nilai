@@ -197,6 +197,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `nama`, `username`, `password`, `level`) VALUES
 (1, 'Admin', 'admin@aga.com', 'admin123', 'admin'),
+(1, 'Admin', 'admin', 'admin', 'admin'),
+(2, 'Dosen', 'dosen', 'dosen', 'dosen'),
 (2, 'Dosen', 'dosen@aga.com', 'dosen123', 'dosen');
 
 --
